@@ -1,0 +1,68 @@
+{
+  "contributors": [
+    {
+      "name": "Dexter Hardy",
+      "email": "dexter.hardy@ntegral.com",
+      "url": "http://www.ntegral.com"
+    }
+  ],
+  "name": "@ntegral/nestjs-sendgrid",
+  "version": "1.0.0",
+  "description": "Provides an injectable lulu api client to provide features to the Lulu API",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "format": "prettier --write \"lib/**/*.ts\"",
+    "publish:npm": "npm publish --access public",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntegral/nestjs-sendgrid.git"
+  },
+  "keywords": [
+    "SendGrid",
+    "NestJs",
+    "Node",
+    "API"
+  ],
+  "author": "ntegral inc.",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.0.1",
+    "deepmerge": "^4.2.2"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^6.11.11",
+    "@nestjs/core": "^6.11.11",
+    "@nestjs/testing": "^6.11.11",
+    "@types/deepmerge": "^2.2.0",
+    "@types/jest": "^25.2.1",
+    "jest": "^25.4.0",
+    "prettier": "^1.19.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.5",
+    "ts-jest": "^25.4.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "lib",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
