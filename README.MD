@@ -10,7 +10,7 @@
   <p align="center">
     Injectable SendGrid client for your nestjs projects
   </p>
-  <!-- 
+  <!--
   <p align="center">
     <img src="https://circleci.com/gh/dhaspden/nestjs-stripe.svg?style=svg">
     <a href="https://codecov.io/gh/dhaspden/nestjs-stripe">
@@ -22,6 +22,7 @@
 
 ## Table Of Contents
 
+- [Table Of Contents](#table-of-contents)
 - [About](#about)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
@@ -94,28 +95,6 @@ import { InjectSendGrid, SendGridService } from '@ntegral/nestjs-sendgrid';
 export class AppService {
   public constructor(@InjectSendGrid() private readonly client: SendGridService) {}
 }
-```
-
-Asynchronous setup is also supported
-
-```typescript
-import { Module } from '@nestjs-common';
-import { ConfigModule } from '../common/config/config.module';
-import { ConfigService } from '../common/config/config.service';
-import { SendGridModule } from '@ntegral/nestjs-sendgrid';
-
-@Module({
-  imports: [
-    StripeModule.forRootAsync({
-      imports: [ConfigModule],  
-      inject: [ConfigService],
-      useFactory: (cfg: ConfigService) => ({
-        apiKey: cfg.get('sendgrid_api_key'),
-      }),
-    }),
-  ],
-})
-export class AppModule {}
 ```
 
 ## Contributing
