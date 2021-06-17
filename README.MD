@@ -106,7 +106,7 @@ import { SendGridModule } from '@ntegral/nestjs-sendgrid';
 
 @Module({
   imports: [
-    StripeModule.forRootAsync({
+    SendGridModule.forRootAsync({
       imports: [ConfigModule],  
       inject: [ConfigService],
       useFactory: (cfg: ConfigService) => ({
