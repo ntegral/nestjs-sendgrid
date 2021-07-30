@@ -47,7 +47,7 @@ npm install --save @ntegral/nestjs-sendgrid @sendgrid/mail
 The simplest way to use `@ntegral/nestjs-sendgrid` is to use `SendGridModule.forRoot`
 
 ```typescript
-import { Module } from '@nestjs-common';
+import { Module } from '@nestjs/common';
 import { SendGridModule } from '@ntegral/nestjs-sendgrid';
 
 @Module({
@@ -63,7 +63,7 @@ export class AppModule {}
 The async way `@ntegral/nestjs-sendgrid` is to use `SendGridModule.forRootAsync`
 
 ```typescript
-import { Module } from '@nestjs-common';
+import { Module } from '@nestjs/common';
 import { SendGridModule } from '@ntegral/nestjs-sendgrid';
 import { ConfigModule } from '@ntegral/nestjs-config';
 import { ConfigService } from '@ntegral/nestjs-config';
@@ -99,7 +99,7 @@ export class AppService {
 Asynchronous setup is also supported
 
 ```typescript
-import { Module } from '@nestjs-common';
+import { Module } from '@nestjs/common';
 import { ConfigModule } from '../common/config/config.module';
 import { ConfigService } from '../common/config/config.service';
 import { SendGridModule } from '@ntegral/nestjs-sendgrid';
