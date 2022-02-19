@@ -83,7 +83,7 @@ import { ConfigService } from '@ntegral/nestjs-config';
 export class AppModule {}
 ```
 
-You can then inject the Stripe client into any of your injectables by using a
+You can then inject the Sendgrid client into any of your injectables by using a
 custom decorator
 
 ```typescript
@@ -106,7 +106,7 @@ import { SendGridModule } from '@ntegral/nestjs-sendgrid';
 
 @Module({
   imports: [
-    StripeModule.forRootAsync({
+    SendGridModule.forRootAsync({
       imports: [ConfigModule],  
       inject: [ConfigService],
       useFactory: (cfg: ConfigService) => ({
